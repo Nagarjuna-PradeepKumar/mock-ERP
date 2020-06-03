@@ -1,0 +1,537 @@
+*{
+  box-sizing: border-box;
+}
+
+/*----------------------------------ENTIRE DOCUMENT----------------------------*/
+.maincontainer{
+  width: 100%;
+  min-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+/*----------------------------------TOP NAVIGATION BAR----------------------------*/
+.navbar{
+  background-color: #FAC3A5;
+  display: flex;
+  flex-direction: row;
+  min-width: 100%;
+  max-width: 100%;
+  height: 80px;
+  min-height: fit-content;
+  max-height: 100px;
+  justify-content:flex-start
+}
+.logo{
+  display:flex;
+  height: 100%;
+  width: 15%;
+  min-width: 150px;
+  justify-content: center;
+  align-items: center; 
+}
+.logo img{
+  max-height: 85px;
+  width: 120px;
+}
+.navlinks{
+  display: flex;
+  flex-direction:row;
+  justify-content: space-around;
+  background-image: url('./images/bluebg.jpg');
+  background-size: cover;
+  margin: auto;
+  height: 100%;
+  width: 80%;
+  min-width: 400px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius:50px;
+}
+
+.logouticon{
+  margin-top: -5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 5%;
+  min-width: 100px;
+}
+.logouticon img{
+  height: 50px ;
+  width:  55px;
+}
+
+.navlinks button{
+  outline: none;
+  text-align: center;
+  border: none;
+  background:none;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FAC3A5;
+  text-decoration: none;
+}
+.navlinks button :active{
+  border: none;
+}
+.navlinks button:hover{
+  display: flex;
+  align-items: center;
+  color: rgb(248, 193, 14);
+  font-size: 20px;
+  text-decoration: none;
+}
+/*------------------------------------------------MIDDLE PART OF SCREEN-----------------------*/
+.mainpane{
+  background-image: url('./images/white.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-width: 650px;
+  min-height: fit-content;
+  display: flex;
+  flex-direction: column;
+  flex:1;
+  justify-content: flex-start;
+  align-items: center;
+}
+/*-------------------------only for new entry and material request-----------------*/
+.entryandrequest{
+  margin-top: 50px;
+  background-color:#FFE4AF;
+  box-shadow: rgb(50, 14, 71) 1px 1px 10px 10px ;
+  height: max-content;
+  width: 600px;
+  min-width: 650px;
+  display: flex;
+  flex-direction: column;
+}
+.formhead{
+  border: none;
+  font-size: 20px;
+  font-variant-caps: all-petite-caps;
+}
+.entryandrequest div{
+  display: flex;
+  margin-top: 30px;
+  width: 100%;
+}
+.entryandrequest label{
+  color: rgb(50, 14, 71);
+  font-size: 17px;
+  width: 30%;
+  min-width: 150px ;
+}
+.textfield{
+  border: none;
+  border-radius: 5px;
+  text-align: left;
+  font-size: 18px;
+  background-color: #FAC3A5;
+  color: rgb(50, 14, 71);
+  width: 70%;
+  min-width: 400px;
+}
+
+.subclear{
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 10px;
+}
+.but{
+  font-size: 15px;
+  width:300px;
+  height:40px;
+  border-radius: 5px;
+  background-color:#7A596F ;
+  border-color:#47033E ;
+}
+.but:hover{
+  width:300px;
+  min-width: 100px;;
+  border-radius: 5px;
+  background-color:rgb(173, 56, 81) ;
+  border-color:#47033E ;
+}
+/*-----------------------------------stock check----screen-----------------------*/
+.stockmain{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: fit-content;
+  background-color:#FFE4AF;
+  box-shadow: rgb(50, 14, 71) 1px 1px 10px 5px ;
+  min-width: 650px;
+  max-width: 650px;
+}
+.stockcheck{
+  background-color: rgb(252, 216, 144) ;
+  color: rgb(50, 14, 71);
+  margin-top: 15px;
+  display: flex;
+  width: 650px;
+  min-width: 650px;
+  max-width: 65050px;
+  flex-direction: column;
+  box-shadow: rgb(50, 14, 71) 1px 1px 10px 10px ;
+}
+.selector{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: fit-content;
+  width: 650px;
+  min-width: 650px;
+  max-width: 65050px;
+
+}
+.radioselector{
+  border-radius: 5px;
+  font-variant-caps: all-petite-caps;
+}
+.stockcheckinput {
+  display: flex;
+  border: none;
+  min-width: 650px;
+  flex-direction:column;
+  justify-content: space-between;
+  align-items: center;
+  font-variant-caps: all-petite-caps;
+}
+.butt{
+  margin-top: 5px;
+  font-size: 15px;
+  width:80px;
+  border-radius: 5px;
+  background-color:#7A596F ;
+  border-color:#47033E ;
+}
+.butt:hover{
+  background-color:rgb(173, 56, 81) ;
+  border-color:#47033E ;
+}
+.textfield2{
+  border: none;
+  border-radius: 5px;
+  text-align: left;
+  font-size: 18px;
+  background-color: rgb(253, 184, 147);
+  color: rgb(50, 14, 71);
+}
+/*--------------------------------------query-data table----------------*/
+.datatable{
+  display: table-row;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  background-color: #FFE4AF ;
+  box-shadow: rgb(50, 14, 71) 1px 1px 10px 1px ;
+  color: rgb(50, 14, 71);
+  border-spacing: 1px 20px;
+  width: 450px;
+  min-width: 450px;
+  max-width: 550px;
+}
+tr{
+  display:table;
+  word-break: break-all;
+}
+.tableleft{
+  align-items: flex-start;
+  min-width: 150px;
+}
+/*--------------------------------------------FOOTER-----------------*/
+.footer{
+  background-color: rgb(68, 25, 62);
+  display: flex;
+  height: 25px;
+}
+
+
+/* //////////////////////////////////////////////////END OF MAIN ORIENTATION//////////////////////////////////////////// */
+
+
+
+
+
+
+@media screen and (max-width:700px){
+ /*----------------------------------ENTIRE DOCUMENT----------------------------*/
+  .maincontainer{
+    width: 100%;
+    min-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  /*----------------------------------TOP NAVIGATION BAR----------------------------*/
+  .navbar{
+    background-color: #FAC3A5;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    min-width: 100%;
+    min-height: 25vh;
+    height: 30vh;
+  }
+  .logo{
+    order: 1;
+    display:flex;
+    flex: 1;
+    height: 20%;
+    min-width: 100px;
+    max-width: fit-content;
+    height: 40%;     
+  }
+  .logo img{
+    height: 100%;
+    width: 120px;
+  }    
+  .logouticon{
+    order:2;
+    margin-top: -5px;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    min-width: 100px;
+    max-width: fit-content;
+    height: 40%;
+  }
+  .logouticon img{
+    height: 100% ;
+    width:  55px;
+  }
+  .navlinks{
+    order:3;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
+    background-image: url('./images/bluebg.jpg');
+    background-size: cover;
+    height: 60%;
+    min-width: 100%;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius:50px;
+  } 
+  .navlinks button{
+    outline: none;
+    text-align: center;
+    border: none;
+    background:none;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FAC3A5;
+    text-decoration: none;
+  }
+  .navlinks button :active{
+    border: none;
+  }
+  .navlinks button:hover{
+    display: flex;
+    align-items: center;
+    color: rgb(248, 193, 14);
+    font-size: 20px;
+    text-decoration: none;
+  }
+  /*------------------------------------------------MIDDLE PART OF SCREEN-----------------------*/
+  .mainpane{
+    background-image: url('./images/white.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 100%;
+    min-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  /*-------------------------only for new entry and material request-----------------*/
+  .entryandrequest{
+    margin-top: 60px;
+    background-color:#FFE4AF;
+    box-shadow: rgb(50, 14, 71) 1px 1px 10px 2px ;
+    height: max-content;
+    min-width: 90%;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .formhead{
+    border: none;
+    font-size: 20px;
+    font-variant-caps: all-petite-caps;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    min-width: 100%;
+  }
+  .entryandrequest div{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    max-width: 100%;
+    min-width: 100%;
+  }
+  .entryandrequest label{
+    color: rgb(50, 14, 71);
+    font-size: 17px;
+    width: 30%;
+
+  }
+  .textfield{
+    border: none;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 18px;
+    background-color: #FAC3A5;
+    color: rgb(50, 14, 71);
+    max-width: 100%;
+    min-width: 100%;
+  }
+  
+  .subclear{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+  }
+  .but{
+    font-size: 15px;
+    width:150px;
+    height: 50px;
+    border-radius: 5px;
+    background-color:#7A596F ;
+    border-color:#47033E ;
+  }
+  .but:hover{
+    width:150px;
+    min-width: 100px;;
+    border-radius: 5px;
+    background-color:rgb(173, 56, 81) ;
+    border-color:#47033E ;
+  }
+  /*-----------------------------------stock check----screen-----------------------*/
+  .stockmain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    background-color:#FFE4AF;
+    box-shadow: rgb(50, 14, 71) 1px 1px 10px 1px ;
+    min-width: 95%;
+    max-width: 95%;
+  }
+  .stockcheck{
+    background-color: rgb(252, 216, 144) ;
+    color: rgb(50, 14, 71);
+    margin-top: 15px;
+    display: flex;
+    min-width: 100%;
+    max-width: 100%;
+    flex-direction: column;
+    box-shadow: rgb(50, 14, 71) 1px 1px 10px 0px ;
+  }
+  .selector{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: fit-content;
+    width: 650px;
+    min-width: 100%;
+    max-width: 100%;
+  
+  }
+  .radioselector{
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    font-variant-caps: all-petite-caps;
+  }
+  .stockcheckinput{
+    display: flex;
+    min-width: 100%;
+    max-width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-variant-caps: all-petite-caps;
+  }
+  .stockcheckinput div{
+    display: flex;
+    border:none;
+    min-width: 100%;
+    max-width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    font-variant-caps: all-petite-caps;
+  }
+  .stockcheckinput legend{
+    text-decoration: underline  rgb(50, 14, 71);
+  }
+  .stockcheckinput input{
+    text-align: center;
+  }
+  .butt{
+    margin-top: 10px;
+    font-size: 15px;
+    width:80px;
+    border-radius: 5px;
+    background-color:#7A596F ;
+    border-color:#47033E ;
+  }
+  .butt:hover{
+    background-color:rgb(173, 56, 81) ;
+    border-color:#47033E ;
+  }
+  .textfield2{
+    border: none;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 18px;
+    background-color: rgb(253, 184, 147);
+    color: rgb(50, 14, 71);
+  }
+  /*--------------------------------------query-data table----------------*/
+  .datatable{
+    display: table-row;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    background-color: #FFE4AF ;
+    box-shadow: rgb(50, 14, 71) 1px 1px 10px 1px ;
+    color: rgb(50, 14, 71);
+    border-spacing: 1px 20px;
+    min-width: 100%;
+    max-width: 100%;
+  }
+  tr{
+    display:table;
+    word-break: break-all;
+  }
+  /*--------------------------------------------FOOTER-----------------*/
+  .footer{
+    background-color: rgb(68, 25, 62);
+    display: flex;
+    height: 25px;
+  }
+  
+}
