@@ -84,7 +84,7 @@ class Quality extends Component{
   //////////////////--------------------POST AXIOS------HANDLERS----------//////////////////////
   submitdetails=(e)=>{
     e.preventDefault()
-  axios.post('http://192.168.43.37:5000/quality/entry',
+  axios.post('http://localhost:5000/quality/entry',
     { project                 : this.state.entry_project,
       partno                  : this.state.entry_partno,
       inspected_quantity      : this.state.entry_quantityinspected,
@@ -95,7 +95,7 @@ class Quality extends Component{
 }
  submithistoryfetch=(e)=>{
   e.preventDefault()
- axios.post('http://192.168.43.37:5000/quality/query/history',{
+ axios.post('http://localhost:5000/quality/query/history',{
  project:this.state.hist_project,partno:this.state.hist_partno}
  ).then(Response=>{if(Array.isArray(Response.data)){this.setState({histdata:Response.data[0]});this.datafetchbuttonhandler()}else alert(Response.data)}).catch(Error=>alert(Error))
  }
