@@ -73,7 +73,7 @@ class DesignerHome extends Component{
   //////////////////--------------------POST AXIOS------HANDLERS----------//////////////////////
   submitedit=(e)=>{
     e.preventDefault()
-    axios.post('http://192.168.43.37:5000/designer/edit/update',
+    axios.post('http://localhost:5000/designer/edit/update',
     {
       "project"            :this.state.edit_project,        
       "partno"             :this.state.edit_partno,      
@@ -85,7 +85,7 @@ class DesignerHome extends Component{
    }
   submitorder=(e)=>{
    e.preventDefault()
-   axios.post('http://192.168.43.37:5000/designer/order',
+   axios.post('http://localhost:5000/designer/order',
    {
     "project":this.state.entry_project,
     "details":[
@@ -100,7 +100,7 @@ class DesignerHome extends Component{
  }
  fetchdata=(e)=>{
   e.preventDefault()
-  axios.post('http://192.168.43.37:5000/designer/edit/fetch',
+  axios.post('http://localhost:5000/designer/edit/fetch',
   {
    "project"  :this.state.fetch_project,        
    "partno"   :this.state.fetch_partno}).then(Response=>{
