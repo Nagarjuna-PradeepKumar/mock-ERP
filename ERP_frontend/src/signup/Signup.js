@@ -21,7 +21,7 @@ class Signup extends Component {
         password:this.state.password,
         repeat_password:this.state.repassword,
       }
-      await axios.post('http://192.168.43.37:5000/signup',this.senddata)
+      await axios.post('http://localhost:5000/signup',this.senddata)
       .then(Response=>alert(Response.data))
       .catch(Error=>{alert(Error)})
     }
