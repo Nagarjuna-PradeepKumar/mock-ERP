@@ -23,7 +23,7 @@ class Mainhome extends Component {
       username:this.state.username,       
       password:this.state.password,
     }
-    axios.post('http://192.168.43.37:5000/login',{username:this.state.username,password:this.state.password})
+    axios.post('http://localhost:5000/login',{username:this.state.username,password:this.state.password})
     .then(Response=>{if(Response.data.valid){
       alert(Response.data.status);
       this.props.Login(Response.data);
