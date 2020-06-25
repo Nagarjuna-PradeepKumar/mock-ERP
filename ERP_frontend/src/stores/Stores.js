@@ -117,7 +117,7 @@ class Stores extends Component{
   //////////////////--------------------POST AXIOS------HANDLERS----------//////////////////////
   submitmrn=(e)=>{
     e.preventDefault()
-    axios.post('http://192.168.43.37:5000/store/mrn',
+    axios.post('http://localhost:5000/store/mrn',
     {"project":this.state.mrn_project,
     "partno":this.state.mrn_partno,
     "taken_date":this.state.mrn_date,
@@ -127,7 +127,7 @@ class Stores extends Component{
   }
   submitnewenrty=(e)=>{
    e.preventDefault()
-   axios.post('http://192.168.43.37:5000/store/entry',
+   axios.post('http://localhost:5000/store/entry',
    {
     "project"             :this.state.entry_project,        
     "partno"              :this.state.entry_partno,      
@@ -139,7 +139,7 @@ class Stores extends Component{
   e.preventDefault()
   ///all-----and------partnumber
   if(this.state.searchin==="all"&& this.state.searchby==="partnumber"){
-    axios.post('http://192.168.43.37:5000/store/query',{
+    axios.post('http://localhost:5000/store/query',{
       "C_all":true,
       "C_partno":true,
       "partno":this.state.check_partno,	
@@ -147,7 +147,7 @@ class Stores extends Component{
   }
   ///all-----and------description
   if(this.state.searchin==="all"&& this.state.searchby==="description"){
-    axios.post('http://192.168.43.37:5000/store/query',{
+    axios.post('http://localhost:5000/store/query',{
       "C_all":true,
       "C_description":true,
       "description":this.state.check_description,	
@@ -155,7 +155,7 @@ class Stores extends Component{
   }
   ///project-----and------partnumber
   if(this.state.searchin==="project"&& this.state.searchby==="partnumber"){
-    axios.post('http://192.168.43.37:5000/store/query',{
+    axios.post('http://localhost:5000/store/query',{
       "C_project":true,
       "C_partno":true,
       "project":this.state.check_project,
@@ -163,7 +163,7 @@ class Stores extends Component{
     }).then(Response=>{if(typeof Response.data==='number'){this.setState({availablequantity:Response.data})}else alert(Response.data)}).catch(Error=>alert(Error))
   }
   if(this.state.searchin==="project"&& this.state.searchby==="description"){
-    axios.post('http://192.168.43.37:5000/store/query',{
+    axios.post('http://localhost:5000/store/query',{
       "C_project":true,
       "C_description":true,
       "project":this.state.check_project,
@@ -173,7 +173,7 @@ class Stores extends Component{
  }
  submithistoryfetch=(e)=>{
   e.preventDefault()
- axios.post('http://192.168.43.37:5000/store/query/history',{
+ axios.post('http://localhost:5000/store/query/history',{
  project:this.state.hist_project,partno:this.state.hist_partno}
  ).then(Response=>{if(Array.isArray(Response.data)){this.setState({histdata:Response.data});this.datafetchbuttonhandler()}else alert(Response.data)}).catch(Error=>alert(Error))
  }
